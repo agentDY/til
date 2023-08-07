@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 속성(速成) 복습</title>
+</head>
+    <div class="container"> 
+        <div> 참고 유튜브: <a href="https://youtu.be/hLhHFiwhRfA" target="_blank">한시간만에 끝내는 자바스크립트 입문</a></div>
+        <div>이름: <input type="text" id="name" value=""> </div>
+        <div>지역:
+            <select id="city" onchange="changecity()">
+                <!-- <option value="02">서울</option>
+                <option value="064">제주</option> -->
+            </select>
+        </div>
+        <div>동네:
+            <select id="region_02">
+                <option>서초</option>
+                <option>강남</option>
+            </select>
+        
+            <select id="region_064" style="display: none;">
+                <option>제주시</option>
+                <option>서귀포시</option>
+            </select>
+        </div>
+        <div>테스트:<input type="text" id="test" value=""></div>
+        <button type="button" onclick="register()">등록</button>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script>
+        function register(){
+            alert($('#name').val());
+            alert($('#city').val());
+
+            // 오브젝트
+            // let obj = {
+            //     name: "",
+            //     city: ""
+            // };
+            
+            // 오브젝트만 만들어주고 안에 key를 안만들어놓으면 아래처럼 넣었을 때 자동으로 key를 생성해서 입력된다
+            let obj = {};
+
+            obj.name = $('#name').val();
+            obj.city = $('#city').val();
+
+            console.log(obj);
+
+            printConsole1(obj);
+            // printConsole2(name, city);
+        }
+        
+        // 배열
+        function loadCity(){
+            // 서버에서 city list를 받아왔다고 가정     index번호
+            let city = [ {code:"02", name:"서울"},   //city[0]
+                {code:"064", name:"제주"},          // city[1]
+                {code:"053", name:"부산"} ];        // city[2]
+
+            // $('#city').append('<option value="02" selected>서울</option>');
+	        // $('#city').append('<option value="064">제주</option>');
+
+            // city.length = 2
+            for(let i=0; i<city.length; i++){
+                if(i==0) $('#city').append('<option value="' + city[i].code +'" selected>'+ city[i].name +'</option>');
+                else $('#city').append('<option value="'+city[i].code+'">'+ city[i].name + '</option>');
+            }
+        }
+        // 위 함수를 강제로 호출    
+        loadCity();
+
+        // 오브젝트1
+        function printConsole1 (data){
+            console.log(data);
+        }
+
+        // 오브젝트2 (오브젝트를 매개변수로 보내지않았을 때)
+        // function printConsole2(name, city){
+        //     console.log(name, city);
+        // }
+
+        function changecity(){
+            // var city = document.getElementById('city').value;
+            // document.getElementById('region_02').style.display="none";
+            // document.getElementById('region_064').style.display="none";
+            // document.getElementById('region_' + city).style.display="";
+
+            // 제이쿼리방식
+            let city = $('#city').val();
+            $('#region_02').hide();
+            $('#region_064').hide();
+            $('#region_' + city).show();
+        }
+
+        // var, let, const
+        // var => var변수는 이름을 재사용 가능 -> 값을 초기화... (잘 안쓴다)
+        var x = 1;
+        x = x + 2;
+        document.getElementById("test").value = x;
+
+        var x = 2;
+        document.getElementById('test').value = x;        
+
+        // let  => 동일한 변수명으로 값을 재할당할 수는 있으나 이름 재사용 불가(값을 새롭게 초기화할 수 없음)
+        let y = 1;
+        y = y + 2;	// 값을 재할당할 수는 있음
+        // let y = 2;	// 동일한 변수명으로 값을 초기화 할 수 없음
+        document.getElementById('test').value = y;
+
+        // const => 상수의 개념
+        const z = 1;
+        // z = z + 4;	// 한 번 할당할 값을 재할당 못함
+        document.getElementById('test').value = z;
+    </script>
+
+
+</body>
+
+</html>

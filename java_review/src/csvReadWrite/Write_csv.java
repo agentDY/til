@@ -85,8 +85,14 @@ public class Write_csv {
 		return ret;
 	}
 	
-	
-	
 }
+
+
+// 참고 유튜브: https://youtu.be/sFMT5E0eBrw
+
+//	csv 파일 쓰기
+//	BufferedWriter 클래스로 csv 파일에 데이터 기록 가능
+//	File, FileWriter를 랩해서 쓰는 것은 일반적으로 write 하는 것과 동일
+
 
 

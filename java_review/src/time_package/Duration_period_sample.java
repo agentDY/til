@@ -27,3 +27,5 @@ public class Duration_period_sample {
 
 //	Period : 날짜의 간격
 //	Duration : 시간의 간격
+
+

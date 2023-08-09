@@ -60,7 +60,6 @@ public class Collection_sample {
 		
 		System.out.println(set.toString());
 		
-		
 		System.out.println("=================== Set 출력 > for콜론문 이용 ===================");
 
 		Set<String> set1 = new HashSet<>();
@@ -88,7 +87,6 @@ public class Collection_sample {
 		
 		System.out.println("=================== Map ===================");
 		//	Map<K,V> 변수 = new HashMap();
-
 		// Map => Key:Value 로 구성
 		Map map = new HashMap();
 		map.put("과일", "사과");

@@ -15,5 +15,6 @@ public class SampleMain {
 		sample2.setObject(123);
 		System.out.println(sample2.getOjbect());
 	}
-
 }
+
+

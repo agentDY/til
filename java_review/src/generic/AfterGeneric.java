@@ -17,3 +17,4 @@ public class AfterGeneric {
 		System.out.println(num);
 	}
 }
+

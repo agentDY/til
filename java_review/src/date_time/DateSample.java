@@ -12,4 +12,4 @@ public class DateSample {
 
 }
 
-// 참고 유튭: https://youtu.be/PVSnM2GPGlM
+// 참고 유튜브: https://youtu.be/PVSnM2GPGlM

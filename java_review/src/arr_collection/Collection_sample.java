@@ -135,8 +135,8 @@ public class Collection_sample {
 }
 
 // 참고 유튜브: https://youtu.be/t3S-Uhd1UPM
-// 참고 유튭: https://youtu.be/9XETcslRRog > set
-// 참고 유튭: https://youtu.be/AVn7QUrcfu0 > map
+// 참고 유튜브: https://youtu.be/9XETcslRRog > set
+// 참고 유튜브: https://youtu.be/AVn7QUrcfu0 > map
 
 // List
 //	add(e)

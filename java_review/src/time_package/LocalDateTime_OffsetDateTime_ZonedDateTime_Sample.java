@@ -33,8 +33,7 @@ public class LocalDateTime_OffsetDateTime_ZonedDateTime_Sample {
 	}
 }
 
-// 참고 유튭: https://youtu.be/QoXBSsNgdT4
-
+// 참고 유튜브: https://youtu.be/QoXBSsNgdT4
 // LocalDateTime
 // OffsetDateTime
 // ZonedDateTime
